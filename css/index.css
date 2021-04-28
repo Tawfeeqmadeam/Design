@@ -1,1 +1,36 @@
-body{ font: 20 px;}
+
+.tools{
+    height: 200px;
+    width: 50px;
+    position: fixed;
+    background-color: #dfe5ea;
+    top: 225px;
+    left: 10px;
+}
+.room{
+    width: inherit;
+    height: 30px;
+}
+.room img{
+    height: inherit;
+    width: inherit;
+}
+.handle {
+      position: absolute;
+      border: 0.1em solid black;
+      width: 1em;
+      height: 1em;
+    }
+.eee{
+        fill:saddlebrown;
+        border: seagreen solid 1px;
+    }
+
+#custom{
+    width: 99%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    background-color: lightcoral;
+    
+}
