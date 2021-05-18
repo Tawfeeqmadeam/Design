@@ -25,6 +25,9 @@
         fill:saddlebrown;
         border: seagreen solid 1px;
     }
+.formErros{
+    color: rgb(173, 16, 77);
+}
 
 #custom{
     width: 99%;
@@ -33,7 +36,4 @@
     bottom: 0;
     background-color: lightcoral;
     
-}
-.formErros{
-    color: rgb(173, 16, 77);
 }
