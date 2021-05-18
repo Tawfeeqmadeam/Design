@@ -1,11 +1,3 @@
-<?php
- session_start();
-if (isset($_SESSION['ID'])) {
- echo $_SESSION['Username']; // Register Session Name
- echo $_SESSION['ID'];
-}
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -19,26 +11,3 @@ if (isset($_SESSION['ID'])) {
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery-ui.min.js"></script>
 </head>
-
-<body style="width:99%;height: 706px;">
-    <?php
-    if(!isset($_SESSION['ID'])){
-    ?>
-    <div>
-        <button><a href="login.php">login</a></button>
-        <button><a href="sign.php">sign</a></button>
-    </div>
-    <?php
-    }else{?>
-        <div><?php echo $_SESSION['Username'] ?></div>
-    <?php
-    }
-    ?>
-
-
-    <script src="js/index.js">
-
-    </script>
-</body>
-
-</html>
