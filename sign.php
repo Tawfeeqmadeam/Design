@@ -1,9 +1,21 @@
 <?php
 require("connected.php");
 session_start();
- if(isset($_SESSION["name"])){
-    header('Location: index.php');
- }
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+     $email = $_POST['email'];
+     $proName = $_POST['name'];
+     $pass = $_POST['psw'];
+    if (isset($email) || isset($proName) || isset($pass)) {
+        $sql = "INSERT INTO `users` (`Username`, `Email`, `Password`)";
+        $sql .= "VALUES('" . $proName . "','" . $email . "','" . $pass . "')";
+        $result = $db->query($sql);
+        header('Location: login.php'); // Redirect To Dashboard page
+    } else {
+        echo 'error';
+        exit;
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,7 +26,7 @@ session_start();
 </head>
 
 <body>
-    <form action="insert.php" method="get" style="border:1px solid #ccc">
+    <form action="sign.php" method="POST" style="border:1px solid #ccc">
         <div class="container">
             <h1>Sign Up</h1>
             <p>Please fill in this form to create an account.</p>
