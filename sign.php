@@ -5,11 +5,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      $email = $_POST['email'];
      $proName = $_POST['name'];
      $pass = $_POST['psw'];
-    if (isset($email) || isset($proName) || isset($pass)) {
-        $sql = "INSERT INTO `users` (`Username`, `Email`, `Password`)";
-        $sql .= "VALUES('" . $proName . "','" . $email . "','" . $pass . "')";
-        $result = $db->query($sql);
-        header('Location: login.php'); // Redirect To Dashboard page
+
+    if (isset($email) && isset($proName) && isset($pass)) {
+        $sqlmails = "SELECT Email FROM users WHERE Email" . "='" . $_POST["email"] . "'";
+        $resultmails = $db->query($sqlmails);
+        $countmails = $resultmails->num_rows; // מחשב אם הייתה תוצאה 
+        if($countmails == 0){
+            $sql = "INSERT INTO `users` (`Username`, `Email`, `Password`)";
+            $sql .= "VALUES('" . $proName . "','" . $email . "','" . $pass . "')";
+            $result = $db->query($sql);
+            header('Location: login.php'); // Redirect To Dashboard page
+        }
+        else{
+            echo "the mail found in datat base , please sign in other mail !!! thanks";
+        }
     } else {
         echo 'error';
         exit;

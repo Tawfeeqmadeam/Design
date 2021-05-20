@@ -31,6 +31,8 @@ if (isset($_SESSION['ID'])) {
     <?php
     }else{?>
         <div><?php echo $_SESSION['Username'] ?></div>
+        <button><a href="design.php">Start</a></button>
+
     <?php
     }
     ?>

@@ -1,3 +1,10 @@
+<?php
+ session_start();
+if (isset($_SESSION['ID'])) {
+ echo $_SESSION['Username']; // Register Session Name
+ echo $_SESSION['ID'];
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -15,7 +22,7 @@
 <body style="width:99%;height: 706px;">
 
     <svg id="theSVG" width="99%" height="700px">
-        <polygon points="0,0 400,0 400,400 0,400" stroke="purple" stroke-width="0" class="eee" transform="translate(550,250)">
+        <polygon id="<?php echo "polygon".$_SESSION['ID'];?>" points="0,0 400,0 400,400 0,400" stroke="purple" stroke-width="0" class="eee" transform="translate(550,250)">
 
         </polygon>
         <rect class="rect" id="1" x="555" z-index="5" y="253" width="100" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"></rect>
@@ -30,7 +37,8 @@
         </rect>
         <rect id="bab" x="950" y="400" width="10" height="100" style="fill:rgb(0, 255, 42);stroke-width:3;stroke:rgb(0,0,0)">
         </rect>
-        <rect id="window" x="700" y="240" width="100" height="10" style="fill:rgb(184, 233, 7);stroke-width:3;stroke:rgb(0,0,0)">
+        <rect id="window" 
+        x="700" y="240" width="100" height="10" style="fill:rgb(184, 233, 7);stroke-width:3;stroke:rgb(0,0,0)">
         </rect>
         <rect id="window1" x="700" y="651" width="100" height="10" style="fill:rgb(184, 233, 7);stroke-width:3;stroke:rgb(0,0,0)">
         </rect>
@@ -38,6 +46,8 @@
     <div class="tools">
         <div class="room"><img src="iconRoom.png"></div>
         <div><button id="otherChange">other </button></div>
+        <div><button id="end" >END </button></div>
+
     </div>
     <div id="custom">
         <div class="container">
@@ -53,7 +63,7 @@
     </div>
 
 
-    <script src="js/index.js">
+    <script src="js/index1.js">
 
     </script>
 </body>
