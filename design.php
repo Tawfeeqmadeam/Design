@@ -22,25 +22,33 @@ if (isset($_SESSION['ID'])) {
 <body style="width:99%;height: 706px;">
 
     <svg id="theSVG" width="99%" height="700px">
-        <polygon id="<?php echo "polygon".$_SESSION['ID'];?>" points="0,0 400,0 400,400 0,400" stroke="purple" stroke-width="0" class="eee" transform="translate(550,250)">
+        <polygon id="<?php echo "polygon".$_SESSION['ID'];?>" points="0,0 400,0 400,400 0,400" stroke="purple" stroke-width="0" class="eee" transform="translate(550,250)" >
 
         </polygon>
-        <rect class="rect" id="1" x="555" z-index="5" y="253" width="100" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"></rect>
-        <rect class="rect" id="2" x="710" y="255" width="100" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"></rect>
-        <rect class="rect" id="3" x="555" z-index="5" y="253" width="100" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"></rect>
+        <rect class="rect END2" id="1" x="555" z-index="5" y="253" width="100" height="100"
+            style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"></rect>
+        <rect class="rect END2" id="2" x="710" y="255" width="100" height="100"
+            style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"></rect>
+        <rect class="rect END2" id="3" x="555" z-index="5" y="253" width="100" height="100"
+            style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)"></rect>
 
-        <rect class="rect1" id="4" x="879" y="400" width="70" height="100" style="fill:rgb(158, 146, 138);stroke-width:3;stroke:rgb(139,69,19)">
+        <rect class="rect1 END2" id="4"x="879" y="400" width="70" height="100"
+            style="fill:rgb(158, 146, 138);stroke-width:3;stroke:rgb(139,69,19)">
         </rect>
-        <rect class="rect1" id="5" x="700" y="252" width="100" height="40" style="fill:rgb(204, 194, 188);stroke-width:3;stroke:rgb(139,69,19)">
+        <rect class="rect1 END2"  id="5" x="700" y="252" width="100" height="40"
+            style="fill:rgb(204, 194, 188);stroke-width:3;stroke:rgb(139,69,19)">
         </rect>
-        <rect class="rect1" id="6" x="700" y="619" width="100" height="40" style="fill:rgb(204, 194, 188);stroke-width:3;stroke:rgb(139,69,19)">
+        <rect class="rect1 END2" id="6" x="700" y="619" width="100" height="40"
+            style="fill:rgb(204, 194, 188);stroke-width:3;stroke:rgb(139,69,19)">
         </rect>
-        <rect id="bab" x="950" y="400" width="10" height="100" style="fill:rgb(0, 255, 42);stroke-width:3;stroke:rgb(0,0,0)">
+        <rect class="END2" id="bab" x="950" y="400" width="10" height="100"
+            style="fill:rgb(0, 255, 42);stroke-width:3;stroke:rgb(0,0,0)">
         </rect>
-        <rect id="window" 
-        x="700" y="240" width="100" height="10" style="fill:rgb(184, 233, 7);stroke-width:3;stroke:rgb(0,0,0)">
+        <rect class="END2" id="window" x="700" y="240" width="100" height="10"
+            style="fill:rgb(184, 233, 7);stroke-width:3;stroke:rgb(0,0,0)">
         </rect>
-        <rect id="window1" x="700" y="651" width="100" height="10" style="fill:rgb(184, 233, 7);stroke-width:3;stroke:rgb(0,0,0)">
+        <rect class="END2" id="window1" x="700" y="651" width="100" height="10"
+            style="fill:rgb(184, 233, 7);stroke-width:3;stroke:rgb(0,0,0)">
         </rect>
     </svg>
     <div class="tools">
@@ -63,7 +71,7 @@ if (isset($_SESSION['ID'])) {
     </div>
 
 
-    <script src="js/index1.js">
+    <script src="js/index.js">
 
     </script>
 </body>

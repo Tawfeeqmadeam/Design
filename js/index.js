@@ -362,6 +362,30 @@ $("#end").click(function(){
     console.log(pointselem);
 
 
-$.post("insert.php",  { user:1 ,polpoints:pointselem}, function(res, status){
+$.post("insert.php",  {polygon:"polygon", user:1 ,polpoints:pointselem}, function(res, status){
 });
+var SelemEnd2 = $(".END2");
+var elemsEnd2 = Array.from(SelemEnd2);
+var arrRectEnd_x = [];
+var arrRectEnd_y = [];
+var arrRectEnd_style = [];
+
+for(i=0;i<elemsEnd2.length;i++){
+   arrRectEnd_x.push(parseInt($(elemsEnd2[i]).attr("x")));
+   arrRectEnd_y.push(parseInt($(elemsEnd2[i]).attr("y")));
+   arrRectEnd_style.push($(elemsEnd2[i]).attr("style"));
+}
+console.log(arrRectEnd_x);
+console.log(arrRectEnd_y);
+
+console.log(arrRectEnd_style);
+
+
+
+$.post("insert.php",  { rect:"rect" ,user:1 , x:arrRectEnd_x , y:arrRectEnd_y ,styles:arrRectEnd_style}, function(res, status){
 });
+
+});
+
+
+

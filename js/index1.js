@@ -361,7 +361,4 @@ $("#end").click(function(){
     console.log(elemEnd);
     console.log(pointselem);
 
-
-$.post("insert.php",  { user:1 ,polpoints:pointselem}, function(res, status){
-});
 });
