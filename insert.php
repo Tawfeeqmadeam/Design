@@ -13,7 +13,6 @@ if(isset($_POST['polygon'])){
 
 
 
-
 if(isset($_POST['rect'])){
     $arr_x = $_POST['x'];
     $arr_y = $_POST['y'];

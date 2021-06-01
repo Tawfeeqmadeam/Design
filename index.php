@@ -1,4 +1,5 @@
 <?php
+include "connected.php";
  session_start();
 if (isset($_SESSION['ID'])) {
  echo $_SESSION['Username']; // Register Session Name
@@ -30,8 +31,41 @@ if (isset($_SESSION['ID'])) {
     </div>
     <?php
     }else{?>
-        <div><?php echo $_SESSION['Username'] ?></div>
-        <button><a href="design.php">Start</a></button>
+    <?php
+
+        $sql = "SELECT roomID FROM room WHERE userID='0'";
+        $result = $db->query($sql);
+        if($result !== false && $result->num_rows > 0){
+            $row = $result->fetch_assoc();
+            $count = $row['roomID'];
+        }else{
+            $sql = "INSERT INTO `room` (`userID`)";
+            $sql .= "VALUES('')";
+            $result = $db->query($sql);
+            if ($result !== false) {
+                $_SESSION['room'] = "ok";
+            }
+            $sql = "SELECT roomID FROM room WHERE userID='0'";
+            $result = $db->query($sql);
+            $row = $result->fetch_assoc();
+            $count = $row['roomID'];
+        }
+    ?>
+      <div id="user"><?php echo $_SESSION['ID'] ?></div>
+        <?php echo "<button id='newRoom'><a href='design.php?roomID=".$count."' >new room</a></button>"?>
+        
+        <?php
+        $sql = "SELECT roomID FROM room WHERE userID" . "='" . $_SESSION['ID'] . "'";
+        $result = $db->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+                echo "<button><a href='design.php?roomID=".$row['roomID']."'>room".$row['roomID']."</a></button>";
+            }
+        }
+       
+
+        ?>
 
     <?php
     }
