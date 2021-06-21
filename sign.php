@@ -28,34 +28,48 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
-
-
+	<meta charset="utf-8">
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="css/nunito-font.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 
-<body>
-    <form action="sign.php" method="POST" style="border:1px solid #ccc">
-        <div class="container">
-            <h1>Sign Up</h1>
-            <p>Please fill in this form to create an account.</p>
-            <hr>
-            <label for="email"><b>name</b></label>
-            <input type="text" placeholder="Enter name" name="name" required>
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-            <div class="clearfix">
-                <button type="button" class="cancelbtn">Cancel</button>
-                <button type="submit" class="signupbtn">Sign Up</button>
+<body class="form-v9">
+	<div class="page-content" style="background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);">
+		<div class="form-v9-content" style="background-image: url('images/form-v9.jpg')">
+			<form class="form-detail" action="sign.php" method="post">
+				<h2>Sign up </h2>
+				<div class="form-row-total">
+					<div class="form-row">
+						<input type="text" name="name" id="full-name" class="input-text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-row">
+						<input type="text" name="email" id="your-email" class="input-text" placeholder="Your Email" required>
+                    </div>
+                </div>
+            <div class="form-row-total">
+			  <div class="form-row">
+						<input type="password" name="psw" id="password" class="input-text" placeholder="Your Password" required>
+                        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+              </div>
+             <div class="form-row">
+						<input type="password" id="comfirm-password" class="input-text" placeholder="Comfirm Password" required>
+			 </div>
             </div>
+          
+            <div class="form-row-last clearfix">
+              <input type="submit" name="register" class="register signupbtn" value="Register">
+              <input type="button" name="register" class="register cancelbtn" value="Cancel">
+			</div>
+
+            
+             </form>
         </div>
-    </form>
-
-
+    </div>
 
 </body>
 

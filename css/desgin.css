@@ -1,0 +1,108 @@
+
+.tools{
+    height: 200px;
+    width: 50px;
+    position: fixed;
+    background-color: #dfe5ea;
+    top: 225px;
+    left: 10px;
+}
+.tools div{
+    width: inherit;
+    height: 30px;
+}
+.tools div img{
+    height: inherit;
+    width: inherit;
+}
+.handle {
+      position: absolute;
+      border: 0.1em solid black;
+      width: 1em;
+      height: 1em;
+    }
+.eee{
+        fill:saddlebrown;
+        border: seagreen solid 1px;
+    }
+.formErros{
+    color: rgb(173, 16, 77);
+    background-color: aquamarine;
+}
+
+#custom{
+    width: 99%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    background-color: lightcoral;
+    
+}
+#image:hover{
+    border:5px solid black;
+
+}
+#butleft{
+    width: 10px;
+    height: 10px;
+}
+#moveItem{
+  height: 23px;
+    width: 186px;
+    position: fixed;
+    background-color: #dfe5ea;
+    top: 28px;
+    left: 681px;
+}
+#moveItem button{
+    float: left;
+}
+.shows .headshow{
+    text-align: center;
+    background-color: lightgray;
+    font-size: larger;
+    font-family: system-ui;
+}
+
+.shows #badrooms{
+   width: 220px;
+    height: 250px;
+    overflow-y: scroll;
+    position: fixed;
+    top: 222px;
+    left: 81px;
+    display: none;
+}
+.shows #chairs{
+   width: 220px;
+    height: 250px;
+    overflow-y: scroll;
+    position: fixed;
+    top: 222px;
+    left: 81px;
+    display: none;
+}
+.shows #rooms{
+   width: 220px;
+    height: 250px;
+    overflow-y: scroll;
+    position: fixed;
+    top: 222px;
+    left: 81px;
+    display: none;
+}
+.publicRoom{
+   height: 100px;
+    border-radius: 50px;
+    background-color: darkgray;
+    text-align: center;
+    /* padding: 24px; */
+    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+}
+
+.row{
+        margin-bottom: 20px;
+}
+.row a{
+    text-decoration: none;
+}

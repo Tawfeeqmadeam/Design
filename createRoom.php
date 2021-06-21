@@ -31,25 +31,19 @@ if (isset($_SESSION['ID'])) {
 
 <body style="width:99%;height: 706px;">
     <svg id="roomArea" width="99%" height="700px">
-    <?php
-        $sql = "SELECT * FROM `polygon` WHERE roomID" . "='" . $_GET['roomID'] . "'" ;
-        $result = $db->query($sql);
-        $t=0;
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo "<polygon id='polygon'stroke='purple' stroke-width='0' class='eee' transform='translate(550,250)' points='".$row['points']."' ></polygon>" ;
-            } 
-        }
-        $sql = "SELECT * FROM `rect` WHERE roomID" . "='" . $_GET['roomID'] . "'";
-        $result = $db->query($sql);
-        $t = 0;
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-            echo "<rect id='polygon' x='".$row['x']. "' y='" . $row['y'] . "' style='" . $row['style'] . "' width='".$row['width'] . "' height='" . $row['height'] . "'></rect>";
-            }
-        }
-     ?>
-
+        <polygon id="polygon" points="0,0 400,0 400,400 0,400" stroke="purple" stroke-width="0" class="eee" transform="translate(550,250)"></polygon>
+        <rect class="rect" x="883" y="400" width="70" height="100" style="fill: rgb(139 69 19);stroke-width:3;stroke: rgb(255,0,0);">
+        </rect>
+        <rect class="rect" x="700" y="250" width="100" height="40" style="fill: rgb(139 69 19);stroke-width:3;stroke: rgb(232 101 8);">
+        </rect>
+        <rect class="rect" x="700" y="619" width="100" height="40" style="fill: rgb(139 69 19);stroke-width:3;stroke: rgb(232 101 8);">
+        </rect>
+        <rect class="bab" x="950" y="400" width="10" height="100" style="fill:rgb(0, 255, 42);stroke-width:3;stroke:rgb(0,0,0)">
+        </rect>
+        <rect class="window" x="700" y="240" width="100" height="10" style="fill:rgb(184, 233, 7);stroke-width:3;stroke:rgb(0,0,0)">
+        </rect>
+        <rect class="END2" id="window1" x="700" y="651" width="100" height="10" style="fill:rgb(184, 233, 7);stroke-width:3;stroke:rgb(0,0,0)">
+        </rect>
     </svg>
 
 
